@@ -1,10 +1,11 @@
 @startuml
-left to right  direction
-Usuario -- (Iniciar sesion)
-Usuario -- (Recuperar contraseña)
-Usuario -- (Modificar contraseña)
-Usuario -- (Cerrar sesion)
-Administrador -- (Registrar usuario)
-Administrador -- (Instalar programa)
-Administrador -up-|> Usuario
+
+usecase UC1 as "Sacar dinero
+--
++ solicitud hecha
+"
+(Retener tarjeta) ..|> UC1
+note "Description\ncondición:\n\t{historia sospechosa}\npunto de extensión:\n\tsolicitud hecha" as n1
+(Retener tarjeta) - n1
+
 @enduml
