@@ -1,6 +1,9 @@
 @startuml
-
-Cliente - (Reservar vuelo)
-VIP - (Elegir asientos)
-VIP -up-|> Cliente
+left to right direction
+Cliente -- (Meter dinero)
+Cliente -- (Pedir azucar)
+Cliente -- (Pedir producto)
+Cliente -- (Cancelar)
+(Pedir producto) ..|> (Devolver dinero) : <<include>>
+(Cancelar) ..|> (Devolver dinero) : <<include>>
 @enduml
