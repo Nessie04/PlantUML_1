@@ -1,5 +1,15 @@
 @startuml
 
-Cliente - (Mostrar menú)
+
+left to right direction
+rectangle  {
+  usecase "Mostrar menú"
+  usecase "Pedir comida"
+}
+Cliente -- (Mostrar menú)
+Cliente -- (Pedir comida)
+Restaurante -- (Entregar Comida)
+Restaurante -- (Mostrar menú)
+
 
 @enduml
