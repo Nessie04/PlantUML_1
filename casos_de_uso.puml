@@ -1,15 +1,9 @@
 @startuml
 
-
 left to right direction
-rectangle  {
-  usecase "Mostrar menú"
-  usecase "Pedir comida"
-}
-Cliente -- (Mostrar menú)
-Cliente -- (Pedir comida)
-Restaurante -- (Entregar Comida)
-Restaurante -- (Mostrar menú)
-
+Cliente -- (Confirmar pedido)
+Cliente -- (Cancelar pedido)
+(Confirmar pedido)..|>(Devolver cambio) : <<include>>
+(Cancelar pedido)..|>(Devolver cambio) : <<include>>
 
 @enduml
