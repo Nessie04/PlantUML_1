@@ -1,10 +1,10 @@
 @startuml
 left to right  direction
-newActor -- (Identificarse)
-newActor  -- (Pagar)
-newActor  -- (Elegir mensajero)
-newActor  -- (Confirmar)
-(Identificarse) <|.. (Registrarse) : <<extend>>
-(Pagar) <|--  (Pagar con tarjeta)
-(Pagar) <|-- (Pagar con transferencia)
+Usuario -- (Iniciar sesion)
+Usuario -- (Recuperar contraseña)
+Usuario -- (Modificar contraseña)
+Usuario -- (Cerrar sesion)
+Administrador -- (Registrar usuario)
+Administrador -- (Instalar programa)
+Administrador -up-|> Usuario
 @enduml
